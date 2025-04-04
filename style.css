@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --navy-blue: #0A3161;
+  --classic-red: #B22234;
+  --gold: #FFD700;
+  --white: #FFFFFF;
+  --dark-blue: #041E42;
+  --light-gray: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(rgba(10, 49, 97, 0.8), rgba(10, 49, 97, 0.8)), url(./us-team.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 0 60px 0;
+  color: var(--white);
+}
+
+header {
+  background-color: rgba(11, 30, 66, 0.7);
+  padding: 20px;
+  border-bottom: 4px solid var(--gold);
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.4rem;
+  text-shadow:
+    3px 3px 0 var(--dark-blue),
+    -1px -1px 0 var(--classic-red),
+    1px -1px 0 var(--classic-red),
+    -1px 1px 0 var(--classic-red),
+    1px 1px 0 var(--classic-red);
+  margin: 0;
+  padding: 10px 0;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+section input {
+  width: 100%;
+  max-width: 35rem;
+  border: 2px solid var(--gold);
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+  background-color: var(--white);
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+section button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: var(--classic-red);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section button:hover {
+  background-color: var(--gold);
+  color: var(--navy-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.researchResults {
+  width: 100%;
+  max-width: 60rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.researchResults::-webkit-scrollbar {
+  width: 8px;
+}
+
+.researchResults::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.researchResults::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 10px;
+}
+
+/* Estilo para a lista de jogadores */
+.player-list {
+  width: 100%;
+  max-width: 55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-list-item {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-list-item:hover {
+  transform: translateY(-3px);
+  background-color: var(--gold);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.player-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--navy-blue);
+}
+
+.player-team {
+  color: var(--classic-red);
+  font-style: italic;
+}
+
+/* Estilo para o botão de voltar */
+.back-button {
+  align-self: flex-start;
+  margin-bottom: 15px;
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-button:hover {
+  background-color: var(--classic-red);
+}
+
+.resultItem {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid var(--gold);
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 55rem;
+  color: var(--dark-blue);
+}
+
+.resultItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--navy-blue);
+}
+
+.resultItem h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 2.2rem;
+  color: var(--navy-blue);
+  margin-bottom: 1rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold);
+  width: 100%;
+  display: block;
+}
+
+.more-info-button {
+  display: inline-block;
+  background-color: var(--navy-blue);
+  color: var(--white) !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.more-info-button:hover {
+  background-color: var(--classic-red);
+  color: var(--white) !important;
+  text-decoration: none !important;
+  transform: translateY(-3px);
+}
+
+.description-meta {
+  color: #333;
+  margin: 1rem 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+.littleLetters {
+  color: var(--navy-blue);
+  font-size: 95%;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(255, 215, 0, 0.1);
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: block;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.nothingWasFound {
+  font-family: "Anton", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  background-color: rgba(11, 30, 66, 0.7);
+  border-radius: 10px;
+  border: 2px solid var(--gold);
+}
+
+.search-info {
+  color: var(--white);
+  background-color: var(--navy-blue);
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-left: 5px solid var(--gold);
+  font-weight: 500;
+  width: 100%;
+  max-width: 55rem;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  border-top: 3px solid var(--gold);
+}
+
+h2 {
+  pointer-events: none;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  section input {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .nothingWasFound {
+    font-size: 2rem;
+  }
+
+  .resultItem h2 {
+    font-size: 1.8rem;
+  }
+
+  .resultItem {
+    padding: 1.2rem;
+  }
+
+  .player-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  section {
+    margin-bottom: 1.5rem;
+  }
+
+  .nothingWasFound {
+    font-size: 1.5rem;
+  }
+
+  .resultItem {
+    padding: 1rem;
+  }
+
+  .resultItem h2 {
+    font-size: 1.5rem;
+  }
+
+  .littleLetters {
+    font-size: 85%;
+    padding: 5px 8px;
+  }
+
+  body {
+    padding: 10px 0 50px 0;
+  }
+
+  header,
+  main {
+    border-radius: 5px;
+  }
+}
